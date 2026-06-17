@@ -94,4 +94,3 @@ module bram_controller(
     assign hex_16 = data_out;
     
 endmodule
-*
