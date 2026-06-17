@@ -30,17 +30,38 @@ module top(
     input volume
 );
 
+        logic [7:0] key_out;
     uart_rx (
         .clk(clk),
         .reset(reset),
-        .rx(rx)
+        .rx(rx),
+        .data_out(key_out)
     );
+    
+    logic [15:0] formula_out;
+    logic data_valid;
+    logic [15:0] sound_sample;
+    
+    bram_controller (
+        .clk(clk),
+        .key_board_in(key_out),
+        .data_valid(data_valid),
+        .hex_16(sound_sample)
+    );
+    
+    logic [15:0] edited_sample;
     
     audio (
         .clk(clk),
         .data_in(data_in),
         .volume(volume),
-        .bit_crush(bit_crush)
+        .bit_crush(bit_crush),
+        .formula_out(edited_sample)
+    );
+    
+    i2s_module (
+        .clk(clk),
+        .data_in(edited_sample)
     );
 
 endmodule
