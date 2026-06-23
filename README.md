@@ -16,6 +16,10 @@ parts:
 -pcm5102 dac
 -wires
 
+Alrighty, project v1 is done and heres the dang video:
+https://github.com/user-attachments/assets/83b8e6a8-a0b1-442f-ac9b-748db717de63
+
+
 ok so bitream generated, pcm soldered, demo video coming soon type shi
 
 trunk full of old 100s
