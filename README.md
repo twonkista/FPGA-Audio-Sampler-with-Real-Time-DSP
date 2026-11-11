@@ -14,6 +14,12 @@ parts:
 -pcm5102 dac
 -wires
 
+what i implemented:
+UART keyboard pipeline
+I2S transmission pipeline with the pcm5102 dac
+BRAM counter for audio playback
+4 block storage components storing coe files for audio clips
+
 Alrighty, project v1 is done and heres the demo video:
 https://github.com/user-attachments/assets/83b8e6a8-a0b1-442f-ac9b-748db717de63
 
